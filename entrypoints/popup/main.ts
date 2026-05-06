@@ -169,14 +169,7 @@ btnDiscard.addEventListener('click', async () => {
 btnMove.addEventListener('click', async () => {
   const ids = [...selectedIds];
   if (ids.length === 0) return;
-  const newWindow = await browser.windows.create({ tabId: ids[0] });
-  if (ids.length > 1 && newWindow.id !== undefined) {
-    await browser.tabs.move(ids.slice(1), {
-      windowId: newWindow.id,
-      index: -1,
-    });
-  }
-  await loadTabs();
+  await browser.runtime.sendMessage({ action: 'move-to-new-window', tabIds: ids });
 });
 
 btnDedup.addEventListener('click', async () => {
