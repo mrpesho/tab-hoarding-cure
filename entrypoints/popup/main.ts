@@ -97,15 +97,27 @@ function render() {
     const info = document.createElement('div');
     info.className = 'tab-info';
 
+    const titleRow = document.createElement('div');
+    titleRow.className = 'tab-title-row';
+
     const titleDiv = document.createElement('div');
     titleDiv.className = 'tab-title';
     titleDiv.textContent = tab.title;
+
+    titleRow.append(titleDiv);
+
+    if (tab.discarded) {
+      const badge = document.createElement('span');
+      badge.className = 'tab-badge-discarded';
+      badge.textContent = 'unloaded';
+      titleRow.append(badge);
+    }
 
     const urlDiv = document.createElement('div');
     urlDiv.className = 'tab-url';
     urlDiv.textContent = tab.url;
 
-    info.append(titleDiv, urlDiv);
+    info.append(titleRow, urlDiv);
 
     // Click row to toggle checkbox
     li.addEventListener('click', (e) => {
