@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background rounded square -->
+  <rect width="128" height="128" rx="24" fill="#1a1a2e"/>
+
+  <!-- Stacked tab shapes (back to front) -->
+  <!-- Tab 3 (backmost) -->
+  <rect x="38" y="28" width="68" height="52" rx="6" fill="#2a2a3e" stroke="#3a3a52" stroke-width="2"/>
+  <rect x="50" y="22" width="28" height="10" rx="4 4 0 0" fill="#2a2a3e" stroke="#3a3a52" stroke-width="2"/>
+  <rect x="50" y="27" width="28" height="4" fill="#2a2a3e"/>
+
+  <!-- Tab 2 (middle) -->
+  <rect x="28" y="38" width="68" height="52" rx="6" fill="#2e3550" stroke="#4a5580" stroke-width="2"/>
+  <rect x="40" y="32" width="28" height="10" rx="4 4 0 0" fill="#2e3550" stroke="#4a5580" stroke-width="2"/>
+  <rect x="40" y="37" width="28" height="4" fill="#2e3550"/>
+
+  <!-- Tab 1 (front) -->
+  <rect x="18" y="48" width="68" height="52" rx="6" fill="#3a6ea5" stroke="#5b9bd5" stroke-width="2"/>
+  <rect x="30" y="42" width="28" height="10" rx="4 4 0 0" fill="#3a6ea5" stroke="#5b9bd5" stroke-width="2"/>
+  <rect x="30" y="47" width="28" height="4" fill="#3a6ea5"/>
+
+  <!-- Sparkle / cure symbol (bottom-right) -->
+  <!-- Main star -->
+  <g transform="translate(96, 92)">
+    <path d="M0,-16 L3,-5 L14,-5 L5,2 L8,13 L0,7 L-8,13 L-5,2 L-14,-5 L-3,-5 Z" fill="#f0c040" stroke="#e0a020" stroke-width="1"/>
+  </g>
+
+  <!-- Small sparkle dots -->
+  <circle cx="80" cy="72" r="2.5" fill="#f0c040" opacity="0.8"/>
+  <circle cx="110" cy="82" r="1.8" fill="#f0c040" opacity="0.6"/>
+  <circle cx="88" cy="106" r="2" fill="#f0c040" opacity="0.7"/>
+</svg>

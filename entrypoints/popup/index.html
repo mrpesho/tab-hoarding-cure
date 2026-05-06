@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Hoarding Cure</title>
+    <meta name="manifest.type" content="browser_action" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Tab Hoarding Cure</h1>
+        <div class="filter-row">
+          <input
+            type="text"
+            id="filter-input"
+            placeholder="Filter tabs by regex..."
+            autofocus
+          />
+        </div>
+        <div class="stats" id="stats"></div>
+      </header>
+
+      <div class="toolbar">
+        <div class="toolbar-row">
+          <div class="select-controls">
+            <button id="btn-select-all" class="btn-link">Select all</button>
+            <button id="btn-deselect-all" class="btn-link">Deselect all</button>
+          </div>
+          <button id="btn-dedup" class="btn btn-secondary" title="Close duplicate tabs (keeps first occurrence)">Deduplicate</button>
+        </div>
+        <div class="actions">
+          <button id="btn-close" class="btn btn-danger" disabled title="Close selected tabs">Close</button>
+          <button id="btn-discard" class="btn btn-warning" disabled title="Discard selected tabs (unload from memory but keep tab)">Discard</button>
+          <button id="btn-move" class="btn btn-primary" disabled title="Move selected tabs to a new window">Move to Window</button>
+        </div>
+      </div>
+
+      <ul id="tab-list" class="tab-list"></ul>
+      <div id="empty-state" class="empty-state" hidden>No tabs match your filter</div>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
